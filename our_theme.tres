@@ -1,0 +1,68 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bhhgwixsemah0"]
+
+[ext_resource type="FontFile" uid="uid://dagky6vhy22mc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_aojv8"]
+[ext_resource type="Texture2D" uid="uid://c5rowrfc7h7q1" path="res://assets/border/panel-border-double.png" id="1_ariso"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydjt2"]
+bg_color = Color(0, 0, 0, 0.388235)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+corner_detail = 20
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+shadow_color = Color(0, 0, 0, 0.388235)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_00lo6"]
+texture = ExtResource("1_ariso")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+modulate_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2ea4"]
+bg_color = Color(0, 0, 0, 0.388235)
+border_color = Color(0, 0, 0, 0.388235)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xuj6y"]
+load_path = "res://.godot/imported/panel-border-014.png-36dec69d00eb05365d95edcf4c565869.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1830y"]
+texture = SubResource("CompressedTexture2D_xuj6y")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+modulate_color = Color(0, 0, 0, 1)
+
+[resource]
+BigPanelBackground/base_type = &"PanelContainer"
+BigPanelBackground/styles/panel = SubResource("StyleBoxFlat_ydjt2")
+BigPanelContainer/base_type = &"PanelContainer"
+BigPanelContainer/styles/panel = SubResource("StyleBoxTexture_00lo6")
+Button/font_sizes/font_size = 16
+ButtonMarginContainer/base_type = &"MarginContainer"
+ButtonMarginContainer/constants/margin_top = 30
+Label/fonts/font = ExtResource("1_aojv8")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+PanelBackground/base_type = &"PanelContainer"
+PanelBackground/styles/panel = SubResource("StyleBoxFlat_s2ea4")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_1830y")
+ScreenLabel/base_type = &"Label"
+ScreenLabel/colors/font_color = Color(0.614485, 0.190846, 0.0178032, 1)
+ScreenLabel/colors/font_outline_color = Color(1, 1, 1, 1)
+ScreenLabel/colors/font_shadow_color = Color(1, 1, 1, 1)
+ScreenLabel/font_sizes/font_size = 60
+ScreenLabel/fonts/font = ExtResource("1_aojv8")

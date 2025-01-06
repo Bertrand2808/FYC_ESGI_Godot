@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dny0m8p4jpemm"]
+
+[ext_resource type="FontFile" uid="uid://dagky6vhy22mc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_qexgp"]
+[ext_resource type="Texture2D" uid="uid://cb1b6i83v3py8" path="res://assets/sprites/coin.png" id="2_shk4k"]
+
+[node name="Score UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1110.0
+offset_top = 8.0
+offset_right = 1150.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("1_qexgp")
+theme_override_font_sizes/font_size = 15
+text = "X"
+
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(1093, 15)
+scale = Vector2(1.9375, 1.90625)
+texture = ExtResource("2_shk4k")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
