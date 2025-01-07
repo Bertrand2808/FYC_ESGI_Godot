@@ -34,7 +34,6 @@ corner_radius_bottom_left = 20
 corner_detail = 20
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xuj6y"]
-load_path = "res://.godot/imported/panel-border-014.png-36dec69d00eb05365d95edcf4c565869.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1830y"]
 texture = SubResource("CompressedTexture2D_xuj6y")
