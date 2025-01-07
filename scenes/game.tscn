@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://dnjnahk5hnrkm"]
+[gd_scene load_steps=25 format=4 uid="uid://dnjnahk5hnrkm"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_o81wl"]
 [ext_resource type="PackedScene" uid="uid://cqfxam2ma6c24" path="res://scenes/player.tscn" id="1_sdw3q"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cx83wnomywlbd" path="res://scenes/coin.tscn" id="3_6ylli"]
 [ext_resource type="PackedScene" uid="uid://ya3bqk50i3co" path="res://scenes/killzone.tscn" id="5_sp6ua"]
 [ext_resource type="PackedScene" uid="uid://dod53ic3n756f" path="res://scenes/sand_platform.tscn" id="6_klsd3"]
+[ext_resource type="PackedScene" uid="uid://qn6pwbvsljj5" path="res://scenes/star.tscn" id="7_bnfq4"]
 [ext_resource type="FontFile" uid="uid://r8xjamv80wy5" path="res://assets/fonts/PixelOperator8.ttf" id="8_6sm4o"]
 [ext_resource type="FontFile" uid="uid://dagky6vhy22mc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_ao25b"]
 [ext_resource type="PackedScene" uid="uid://cuxwamcn5fmmv" path="res://scenes/gui.tscn" id="11_bj5xl"]
@@ -340,6 +341,17 @@ position = Vector2(37, 30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_kec3f")
+
+[node name="Stars" type="Node" parent="."]
+
+[node name="Star" parent="Stars" instance=ExtResource("7_bnfq4")]
+position = Vector2(170, -52)
+
+[node name="Star2" parent="Stars" instance=ExtResource("7_bnfq4")]
+position = Vector2(765, -49)
+
+[node name="Star3" parent="Stars" instance=ExtResource("7_bnfq4")]
+position = Vector2(1371, -215)
 
 [node name="Coins" type="Node" parent="."]
 

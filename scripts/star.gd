@@ -4,5 +4,5 @@ extends Area2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _on_body_entered(body: Node2D) -> void:
-	game_manager.add_coin()
+	game_manager.add_star()
 	animation_player.play("pick")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cuxwamcn5fmmv"]
+[gd_scene load_steps=6 format=3 uid="uid://cuxwamcn5fmmv"]
 
 [ext_resource type="Script" path="res://scripts/score_ui.gd" id="1_6elda"]
 [ext_resource type="FontFile" uid="uid://dagky6vhy22mc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_t6wg3"]
 [ext_resource type="Theme" uid="uid://bhhgwixsemah0" path="res://our_theme.tres" id="2_6pg8d"]
 [ext_resource type="Texture2D" uid="uid://jyeh76ad00bt" path="res://assets/sprites/coin_icon.png" id="3_f8lkd"]
+[ext_resource type="Texture2D" uid="uid://bk4xx3psv47go" path="res://assets/sprites/star_icon.png" id="5_1mamv"]
 
 [node name="GUI" type="CanvasLayer"]
 
@@ -23,22 +24,33 @@ theme = ExtResource("2_6pg8d")
 
 [node name="PanelBackground" type="PanelContainer" parent="ScoreUi/PanelContainer"]
 layout_mode = 2
+theme = ExtResource("2_6pg8d")
 theme_type_variation = &"PanelBackground"
 
-[node name="MarginContainer" type="MarginContainer" parent="ScoreUi/PanelContainer/PanelBackground"]
-layout_mode = 2
-
-[node name="GridContainer" type="GridContainer" parent="ScoreUi/PanelContainer/PanelBackground/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="ScoreUi/PanelContainer/PanelBackground"]
 layout_mode = 2
 columns = 2
 
-[node name="TextureRect" type="TextureRect" parent="ScoreUi/PanelContainer/PanelBackground/MarginContainer/GridContainer"]
+[node name="CoinIcon" type="TextureRect" parent="ScoreUi/PanelContainer/PanelBackground/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture = ExtResource("3_f8lkd")
 expand_mode = 2
 
-[node name="LabelCoin" type="Label" parent="ScoreUi/PanelContainer/PanelBackground/MarginContainer/GridContainer"]
+[node name="LabelCoin" type="Label" parent="ScoreUi/PanelContainer/PanelBackground/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.709199, 0.415675, 0.611257, 1)
+theme_override_fonts/font = ExtResource("1_t6wg3")
+theme_override_font_sizes/font_size = 25
+text = "0"
+
+[node name="StarIcon" type="TextureRect" parent="ScoreUi/PanelContainer/PanelBackground/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("5_1mamv")
+expand_mode = 2
+
+[node name="LabelStar" type="Label" parent="ScoreUi/PanelContainer/PanelBackground/GridContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.709199, 0.415675, 0.611257, 1)
 theme_override_fonts/font = ExtResource("1_t6wg3")

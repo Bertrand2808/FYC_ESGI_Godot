@@ -1,12 +1,17 @@
 extends Node
 
-var score = 0
+var score_coins = 0
+var score_stars = 0
 
 @onready var score_label: Label = $ScoreLabel
 
 @onready var score_ui: Node = $"../Player/GUI/ScoreUi"
 
-func add_point():
-	score += 1
-	score_ui.refresh_ui(score)
-	score_label.text = "Congrats ! You collected " + str(score) + " coins!"
+func add_coin():
+	score_coins += 1
+	score_ui.refresh_ui(score_coins,score_stars)
+	score_label.text = "Congrats ! You collected " + str(score_coins) + " coins!"
+
+func add_star():
+	score_stars += 1
+	score_ui.refresh_ui(score_coins,score_stars)

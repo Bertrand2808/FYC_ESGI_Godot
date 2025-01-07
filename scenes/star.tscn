@@ -1,7 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://cx83wnomywlbd"]
+[gd_scene load_steps=22 format=3 uid="uid://qn6pwbvsljj5"]
 
-[ext_resource type="Texture2D" uid="uid://cb1b6i83v3py8" path="res://assets/sprites/coin.png" id="1_1wiri"]
-[ext_resource type="AudioStream" uid="uid://dbif58sh2s7mt" path="res://assets/sounds/coin.wav" id="3_hdjvr"]
+[ext_resource type="Texture2D" uid="uid://dsg78k4vpkikx" path="res://assets/sprites/stars.png" id="1_ck20t"]
+[ext_resource type="AudioStream" uid="uid://vjfb6w4rttu3" path="res://assets/sounds/star.wav" id="2_q8bhr"]
 
 [sub_resource type="GDScript" id="GDScript_icn42"]
 script/source = "extends Area2D
@@ -10,96 +10,103 @@ script/source = "extends Area2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _on_body_entered(body: Node2D) -> void:
-	game_manager.add_coin()
+	game_manager.add_star()
 	animation_player.play(\"pick\")
 "
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_idoc5"]
-atlas = ExtResource("1_1wiri")
-region = Rect2(0, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak2ab"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jq3h6"]
-atlas = ExtResource("1_1wiri")
-region = Rect2(16, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nvvs"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pdobw"]
-atlas = ExtResource("1_1wiri")
-region = Rect2(32, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vbav"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mqfkw"]
-atlas = ExtResource("1_1wiri")
-region = Rect2(48, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_yay4c"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j46lq"]
-atlas = ExtResource("1_1wiri")
-region = Rect2(64, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtote"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pdy0d"]
-atlas = ExtResource("1_1wiri")
-region = Rect2(80, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk4qy"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u46lo"]
-atlas = ExtResource("1_1wiri")
-region = Rect2(96, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuffq"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(192, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ko0b0"]
-atlas = ExtResource("1_1wiri")
-region = Rect2(112, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wx0f5"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(224, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h3j32"]
-atlas = ExtResource("1_1wiri")
-region = Rect2(128, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wd1gp"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(256, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gqog1"]
-atlas = ExtResource("1_1wiri")
-region = Rect2(144, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5gw3"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(288, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uhi58"]
-atlas = ExtResource("1_1wiri")
-region = Rect2(160, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_cx30q"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(320, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_onrkb"]
-atlas = ExtResource("1_1wiri")
-region = Rect2(176, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocdb5"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uo04"]
+atlas = ExtResource("1_ck20t")
+region = Rect2(384, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b78iv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_idoc5")
+"texture": SubResource("AtlasTexture_ak2ab")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jq3h6")
+"texture": SubResource("AtlasTexture_1nvvs")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pdobw")
+"texture": SubResource("AtlasTexture_4vbav")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mqfkw")
+"texture": SubResource("AtlasTexture_yay4c")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j46lq")
+"texture": SubResource("AtlasTexture_xtote")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pdy0d")
+"texture": SubResource("AtlasTexture_mk4qy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u46lo")
+"texture": SubResource("AtlasTexture_kuffq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ko0b0")
+"texture": SubResource("AtlasTexture_wx0f5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h3j32")
+"texture": SubResource("AtlasTexture_wd1gp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gqog1")
+"texture": SubResource("AtlasTexture_f5gw3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uhi58")
+"texture": SubResource("AtlasTexture_cx30q")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_onrkb")
+"texture": SubResource("AtlasTexture_ocdb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3uo04")
 }],
 "loop": true,
 "name": &"default",
@@ -107,7 +114,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jktfd"]
-radius = 5.0
+radius = 7.07107
 
 [sub_resource type="Animation" id="Animation_md5os"]
 length = 0.001
@@ -207,21 +214,22 @@ _data = {
 "pick": SubResource("Animation_doiww")
 }
 
-[node name="Coin" type="Area2D"]
+[node name="Star" type="Area2D"]
 collision_mask = 2
 script = SubResource("GDScript_icn42")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2)
+scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_b78iv")
 autoplay = "default"
-frame = 1
-frame_progress = 0.753886
+frame_progress = 0.87875
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jktfd")
 
 [node name="PickupSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_hdjvr")
+stream = ExtResource("2_q8bhr")
 bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
