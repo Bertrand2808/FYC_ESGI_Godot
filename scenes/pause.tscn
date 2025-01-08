@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn5kxmhygjp3s"]
+
+[ext_resource type="Script" path="res://scripts/death_screen.gd" id="1_pte5q"]
+[ext_resource type="Theme" uid="uid://bhhgwixsemah0" path="res://our_theme.tres" id="2_dsfxb"]
+[ext_resource type="FontFile" uid="uid://dagky6vhy22mc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_mea1s"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="4_a7ots"]
+
+[node name="PauseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pte5q")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 225.0
+offset_top = 89.0
+offset_right = 225.0
+offset_bottom = 89.0
+color = Color(0.137255, 0.137255, 0.137255, 0.25098)
+
+[node name="BigPanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -89.0
+offset_right = 225.0
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_dsfxb")
+theme_type_variation = &"BigPanelContainer"
+
+[node name="BigPanelBackground" type="PanelContainer" parent="BigPanelContainer"]
+show_behind_parent = true
+layout_mode = 2
+theme = ExtResource("2_dsfxb")
+theme_type_variation = &"BigPanelBackground"
+
+[node name="MarginContainer" type="MarginContainer" parent="BigPanelContainer/BigPanelBackground"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="BigPanelContainer/BigPanelBackground/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_dsfxb")
+theme_type_variation = &"ScreenLabel"
+text = "Pause"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+columns = 2
+
+[node name="ButtonMarginContainer2" type="MarginContainer" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer/GridContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme = ExtResource("2_dsfxb")
+theme_type_variation = &"ButtonMarginContainer"
+
+[node name="ResumeButton" type="Button" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer/GridContainer/ButtonMarginContainer2"]
+custom_minimum_size = Vector2(130, 40)
+layout_mode = 2
+theme = ExtResource("2_dsfxb")
+theme_override_fonts/font = ExtResource("3_mea1s")
+text = "Resume"
+script = ExtResource("4_a7ots")
+
+[node name="ButtonMarginContainer" type="MarginContainer" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer/GridContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme = ExtResource("2_dsfxb")
+theme_type_variation = &"ButtonMarginContainer"
+
+[node name="ExitButton" type="Button" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer/GridContainer/ButtonMarginContainer"]
+custom_minimum_size = Vector2(130, 40)
+layout_mode = 2
+theme = ExtResource("2_dsfxb")
+theme_override_fonts/font = ExtResource("3_mea1s")
+text = "Exit"
+script = ExtResource("4_a7ots")

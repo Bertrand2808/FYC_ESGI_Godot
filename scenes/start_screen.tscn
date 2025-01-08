@@ -68,7 +68,7 @@ layout_mode = 2
 theme = ExtResource("2_xrccc")
 theme_type_variation = &"ButtonMarginContainer"
 
-[node name="Button" type="Button" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer/ButtonMarginContainer"]
+[node name="StartButton" type="Button" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer/ButtonMarginContainer"]
 custom_minimum_size = Vector2(130, 40)
 layout_mode = 2
 theme = ExtResource("2_xrccc")

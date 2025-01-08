@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://dnjnahk5hnrkm"]
+[gd_scene load_steps=26 format=4 uid="uid://dnjnahk5hnrkm"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_o81wl"]
 [ext_resource type="PackedScene" uid="uid://cqfxam2ma6c24" path="res://scenes/player.tscn" id="1_sdw3q"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cx83wnomywlbd" path="res://scenes/coin.tscn" id="3_6ylli"]
 [ext_resource type="PackedScene" uid="uid://ya3bqk50i3co" path="res://scenes/killzone.tscn" id="5_sp6ua"]
 [ext_resource type="PackedScene" uid="uid://dod53ic3n756f" path="res://scenes/sand_platform.tscn" id="6_klsd3"]
+[ext_resource type="PackedScene" uid="uid://bn5kxmhygjp3s" path="res://scenes/pause.tscn" id="6_lkmdy"]
 [ext_resource type="PackedScene" uid="uid://qn6pwbvsljj5" path="res://scenes/star.tscn" id="7_bnfq4"]
 [ext_resource type="FontFile" uid="uid://r8xjamv80wy5" path="res://assets/fonts/PixelOperator8.ttf" id="8_6sm4o"]
 [ext_resource type="FontFile" uid="uid://dagky6vhy22mc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_ao25b"]
@@ -335,6 +336,13 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="GUI" parent="Player" instance=ExtResource("11_bj5xl")]
+
+[node name="PauseScreen" parent="Player/GUI" instance=ExtResource("6_lkmdy")]
+visible = false
+offset_left = 28.0
+offset_top = 8.0
+offset_right = 28.0
+offset_bottom = 8.0
 
 [node name="Killzone" parent="." instance=ExtResource("5_sp6ua")]
 position = Vector2(37, 30)
