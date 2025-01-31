@@ -6,8 +6,9 @@ func _ready() -> void:
 
 func _pressed() -> void:
 	if name == "StartButton":
+		Global.set_state("start_time", Time.get_ticks_msec())
 		get_tree().change_scene_to_file("res://scenes/game.tscn")
 	elif name == "ResumeButton":
-		Global.toggle_pause() 
+		Global.toggle_pause()
 	elif name == "ExitButton":
 		get_tree().quit()

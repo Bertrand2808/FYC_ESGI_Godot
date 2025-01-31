@@ -1,18 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfpu0ud3b8p8x"]
+[gd_scene load_steps=5 format=3 uid="uid://dxbgm2ci347br"]
 
-[ext_resource type="Script" path="res://scripts/death_screen.gd" id="1_hronv"]
-[ext_resource type="FontFile" uid="uid://dagky6vhy22mc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_qbtpr"]
-[ext_resource type="Theme" uid="uid://bhhgwixsemah0" path="res://our_theme.tres" id="2_xrccc"]
-[ext_resource type="Script" path="res://scripts/button.gd" id="3_brouk"]
+[ext_resource type="Script" path="res://scripts/end_screen.gd" id="1_polpk"]
+[ext_resource type="Theme" uid="uid://bhhgwixsemah0" path="res://our_theme.tres" id="2_1g2b8"]
+[ext_resource type="FontFile" uid="uid://dagky6vhy22mc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_x5v5r"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="4_5ckin"]
 
-[node name="StartScreen" type="Control"]
+[node name="EndScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hronv")
+script = ExtResource("1_polpk")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -24,7 +24,7 @@ grow_vertical = 2
 color = Color(0.137255, 0.137255, 0.137255, 0.25098)
 
 [node name="BigPanelContainer" type="PanelContainer" parent="."]
-custom_minimum_size = Vector2(450, 0)
+custom_minimum_size = Vector2(700, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,13 +37,13 @@ offset_right = 44.5
 offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_xrccc")
+theme = ExtResource("2_1g2b8")
 theme_type_variation = &"BigPanelContainer"
 
 [node name="BigPanelBackground" type="PanelContainer" parent="BigPanelContainer"]
 show_behind_parent = true
 layout_mode = 2
-theme = ExtResource("2_xrccc")
+theme = ExtResource("2_1g2b8")
 theme_type_variation = &"BigPanelBackground"
 
 [node name="MarginContainer" type="MarginContainer" parent="BigPanelContainer/BigPanelBackground"]
@@ -56,23 +56,31 @@ size_flags_stretch_ratio = 0.0
 
 [node name="Label" type="Label" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("2_xrccc")
+theme = ExtResource("2_1g2b8")
 theme_type_variation = &"ScreenLabel"
-text = "New
-Game"
+text = "Congrats"
 horizontal_alignment = 1
 autowrap_mode = 2
+visible_characters = 14
+visible_ratio = 1.75
 
-[node name="ButtonMarginContainer" type="MarginContainer" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer"]
-custom_minimum_size = Vector2(120, 0)
+[node name="MarginContainer" type="MarginContainer" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
-theme = ExtResource("2_xrccc")
-theme_type_variation = &"ButtonMarginContainer"
+size_flags_stretch_ratio = 18.2
 
-[node name="StartButton" type="Button" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer/ButtonMarginContainer"]
+[node name="ScoreLabel" type="Label" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer/MarginContainer"]
+layout_mode = 2
+text = "- Pièces collecté :
+
+- Etoiles collecté :
+
+- Temps  passé :"
+
+[node name="StartButton" type="Button" parent="BigPanelContainer/BigPanelBackground/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(130, 40)
 layout_mode = 2
-theme = ExtResource("2_xrccc")
-theme_override_fonts/font = ExtResource("2_qbtpr")
-text = "Start"
-script = ExtResource("3_brouk")
+theme = ExtResource("2_1g2b8")
+theme_override_fonts/font = ExtResource("3_x5v5r")
+text = "Retry"
+script = ExtResource("4_5ckin")

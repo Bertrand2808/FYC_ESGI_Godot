@@ -1,6 +1,10 @@
 extends Node
 
+signal state_changed(state_name, value, params)
+
 var is_paused = false
+
+var states := {}
 
 func _ready() -> void:
 	print("Global script is ready.")
@@ -25,3 +29,10 @@ func toggle_pause() -> void:
 			get_tree().paused = true
 	else:
 		print("PauseScreen node not found!")
+
+func get_state(state_name: String) -> Variant:
+	return states.get(state_name, null)
+
+func set_state(state_name: String, value: Variant, params: Dictionary = {}):
+	states[state_name] = value
+	emit_signal("state_changed", state_name, value, params)
